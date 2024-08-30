@@ -11,4 +11,4 @@ services:
       - SERP_API_KEY=${SERP_API_KEY}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     ports:
-      - "8080:8080"
+      - "8000:8000"
