@@ -32,6 +32,10 @@ async def caselaw(request: ChatRequest):
     response= search_cases(request.message)
     return CaseSearchResponse(answer=response["answer"], links=response["links"])
 
+@app.get("/")
+async def root():
+    return {"message": "OK"}
+
 # Step 4: Run the server
 if __name__ == "__main__":
     import uvicorn
