@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  legal-rag-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - SERP_API_KEY=${SERP_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "8080:8080"
